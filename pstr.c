@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * pstr - Prints the string starting at the top of the stack.
+ * f_pstr - Prints the string starting at the top of the stack.
  * @stack: Pointer to the top of the stack.
  * @line_number: Line number in the Monty file where the opcode appears.
  */
-void pstr(stack_t **stack, unsigned int line_number)
+void f_pstr(stack_t **stack, unsigned int line_number)
 {
     stack_t *current = *stack;
 

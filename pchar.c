@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * pchar - Prints the char at the top of the stack.
+ * f_pchar - Prints the char at the top of the stack.
  * @stack: Pointer to the top of the stack.
  * @line_number: Line number in the Monty file where the opcode appears.
  */
-void pchar(stack_t **stack, unsigned int line_number)
+void f_pchar(stack_t **stack, unsigned int line_number)
 {
     /* Validate the arguments */
     if (!stack || !*stack)

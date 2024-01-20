@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * div_op - Divides the second top element of the stack by the top element.
+ * f_div - Divides the second top element of the stack by the top element.
  * @stack: Pointer to the top of the stack.
  * @line_number: Line number in the Monty file where the opcode appears.
  */
-void div_op(stack_t **stack, unsigned int line_number)
+void f_div(stack_t **stack, unsigned int line_number)
 {
 	/* Validate the arguments */
 	if (!stack || !*stack || !(*stack)->next)

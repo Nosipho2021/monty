@@ -5,7 +5,7 @@
  * @stack: Pointer to the top of the stack.
  * @line_number: Line number in the Monty file where the opcode appears.
  */
-void stack(stack_t **stack, unsigned int line_number)
+void f_stack(stack_t **stack, unsigned int line_number)
 {
 	/* Avoid unused parameter warnings */
 	(void)stack;
@@ -15,11 +15,11 @@ void stack(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * queue - Sets the format of the data to a queue (FIFO).
+ * f_queue - Sets the format of the data to a queue (FIFO).
  * @stack: Pointer to the top of the stack.
  * @line_number: Line number in the Monty file where the opcode appears.
  */
-void queue(stack_t **stack, unsigned int line_number)
+void f_queue(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current, *last;
 

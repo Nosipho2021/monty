@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * rotl - Rotates the stack to the top.
+ * f_rotl - Rotates the stack to the top.
  * @stack: Pointer to the top of the stack.
  * @line_number: Line number in the Monty file where the opcode appears.
  */
-void rotl(stack_t **stack, unsigned int line_number)
+void f_rotl(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp, *last;
 	

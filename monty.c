@@ -1,20 +1,35 @@
 #include "monty.h"
 
-int main(int argc, char *argv[]) {
-    if (argc != 2) {
-        fprintf(stderr, "USAGE: monty file\n");
-        exit(EXIT_FAILURE);
-    }
+/**
+ * is_comment -  Add a helper function to check if a line is a comment
+ * is_comment: add a helper function to check line in comment
+ */
 
-    FILE *file = fopen(argv[1], "r");
-    if (!file) {
-        fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
-        exit(EXIT_FAILURE);
-    }
+int is_comment(char *line)
+{
+	while (*line == ' ' || *line == '\t')
+	{
+	line++;
+	}
+	return (*line == '#');
+}
 
-    // Implement logic to read and interpret the Monty byte code from the file
+/**
+ * tokenize_line - Tokenizes a line into opcode and argument.
+ * @line: The line to be tokenized.
+ * @opcode: Pointer to store the opcode.
+ * @arg: Pointer to store the argument.
+ */
+void tokenize_line(char *line, char **opcode, char **arg)
+{
 
-    fclose(file);
-    return 0;
+	if (is_comment(line))
+	{
+	*opcode = NULL;
+	*arg = NULL;
+	return;
+	}
+
+
 }
 

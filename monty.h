@@ -53,26 +53,29 @@ typedef struct instruction_s
     void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void push(stack_t **stack, int data);
-void pop(stack_t **stack, unsigned int line_number);
+void f_push(stack_t **stack, int data);
+void f_pop(stack_t **stack, unsigned int line_number);
 void enqueue(stack_t **stack, int data);
 void dequeue(stack_t **stack, unsigned int line_number);
-void stack(stack_t **stack, unsigned int line_number);
-void queue(stack_t **stack, unsigned int line_number);
-void rotr(stack_t **stack, unsigned int line_number);
-void rotl(stack_t **stack, unsigned int line_number);
-void pstr(stack_t **stack, unsigned int line_number);
-void pchar(stack_t **stack, unsigned int line_number);
-void mod(stack_t **stack, unsigned int line_number);
-void mul(stack_t **stack, unsigned int line_number);
-void div_op(stack_t **stack, unsigned int line_number);
-void sub(stack_t **stack, unsigned int line_number);
-void nop(stack_t **stack, unsigned int line_number);
-void add(stack_t **stack, unsigned int line_number);
-void swap(stack_t **stack, unsigned int line_number);
-void pint(stack_t **stack, unsigned int line_number);
-void pall(stack_t **stack, unsigned int line_number)
-int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
+void f_stack(stack_t **stack, unsigned int line_number);
+void f_queue(stack_t **stack, unsigned int line_number);
+void f_rotr(stack_t **stack, unsigned int line_number);
+void f_rotl(stack_t **stack, unsigned int line_number);
+void f_pstr(stack_t **stack, unsigned int line_number);
+void f_pchar(stack_t **stack, unsigned int line_number);
+void f_mod(stack_t **stack, unsigned int line_number);
+void f_mul(stack_t **stack, unsigned int line_number);
+void f_div_op(stack_t **stack, unsigned int line_number);
+void f_sub(stack_t **stack, unsigned int line_number);
+void f_nop(stack_t **stack, unsigned int line_number);
+void f_add(stack_t **stack, unsigned int line_number);
+void f_swap(stack_t **stack, unsigned int line_number);
+void f_pint(stack_t **stack, unsigned int line_number);
+void f_pall(stack_t **stack, unsigned int line_number)
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
+void free_stack(stack_t *stack);
+void addnode(stack_t **head, int n);
+void tokenize_line(char *line, char **opcode, char **arg);
 
 #endif 
 

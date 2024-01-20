@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * add - Adds the top two elements of the stack.
- * @stack: Pointer to the top of the stack.
+ * f_add - adds the top two elements of the stack.
+ * @stack: pointer to the top of the stack.
  * @line_number: Line number in the Monty file where the opcode appears.
  */
-void add(stack_t **stack, unsigned int line_number)
+void f_add(stack_t **stack, unsigned int line_number)
 {
 	/* Validate the arguments */
 	if (!stack || !*stack || !(*stack)->next)

@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * mul - Multiplies the second top element of the stack with the top element.
+ * f_mul - Multiplies the second top element of the stack with the top element.
  * @stack: Pointer to the top of the stack.
  * @line_number: Line number in the Monty file where the opcode appears.
  */
-void mul(stack_t **stack, unsigned int line_number)
+void f_mul(stack_t **stack, unsigned int line_number)
 {
 	/* Validate the arguments */
 	if (!stack || !*stack || !(*stack)->next)

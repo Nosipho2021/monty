@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int digit1, digit2;
+
+	/* Read two digits from the user*/
+	printf("Enter the first digit: ");
+	scanf("%1d", &digit1);
+
+	printf("Enter the second digit: ");
+	scanf("%1d", &digit2);
+
+	/* Multiply the two digits*/
+	int result = digit1 * digit2;
+
+	/* Ensure the result is one digit long (<10)*/
+	if (result >= 10)
+	{
+	result %= 10;
+	}
+
+	/* Print the result*/
+	printf("The product of %d and %d is: %d\n", digit1, digit2, result);
+
+	return (0);
+}
+

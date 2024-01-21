@@ -71,7 +71,7 @@ void f_nop(stack_t **stack, unsigned int line_number);
 void f_add(stack_t **stack, unsigned int line_number);
 void f_swap(stack_t **stack, unsigned int line_number);
 void f_pint(stack_t **stack, unsigned int line_number);
-void f_pall(stack_t **stack, unsigned int line_number)
+void f_pall(stack_t **head, unsigned int counter);
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
 void free_stack(stack_t *stack);
 void addnode(stack_t **head, int n);
